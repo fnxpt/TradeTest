@@ -16,6 +16,9 @@
 		C2FB42C9205961EF00E4F968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FB42C7205961EF00E4F968 /* LaunchScreen.storyboard */; };
 		C2FB42E72059696E00E4F968 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42E62059696E00E4F968 /* Price.swift */; };
 		C2FB42EC20596A7B00E4F968 /* AppStoryboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42EB20596A7B00E4F968 /* AppStoryboards.swift */; };
+		C2FB42EE20596B6200E4F968 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42ED20596B6200E4F968 /* App.swift */; };
+		C2FB42F020596B7D00E4F968 /* Pallette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42EF20596B7D00E4F968 /* Pallette.swift */; };
+		C2FB42F420596BC000E4F968 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42F320596BC000E4F968 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		C2FB42D5205961EF00E4F968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2FB42E62059696E00E4F968 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		C2FB42EB20596A7B00E4F968 /* AppStoryboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboards.swift; sourceTree = "<group>"; };
+		C2FB42ED20596B6200E4F968 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		C2FB42EF20596B7D00E4F968 /* Pallette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallette.swift; sourceTree = "<group>"; };
+		C2FB42F320596BC000E4F968 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		D55C7941B113F114FB5C2112 /* Pods_TradeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,6 +117,7 @@
 		C2FB42BD205961EF00E4F968 /* Trade */ = {
 			isa = PBXGroup;
 			children = (
+				C2FB42F120596BA700E4F968 /* Extensions */,
 				C2FB42EA20596A7B00E4F968 /* GeneratedCode */,
 				C2FB42E52059696500E4F968 /* Model */,
 				C2FB42BE205961EF00E4F968 /* AppDelegate.swift */,
@@ -119,6 +126,8 @@
 				C2FB42C5205961EF00E4F968 /* Assets.xcassets */,
 				C2FB42C7205961EF00E4F968 /* LaunchScreen.storyboard */,
 				C2FB42CA205961EF00E4F968 /* Info.plist */,
+				C2FB42ED20596B6200E4F968 /* App.swift */,
+				C2FB42EF20596B7D00E4F968 /* Pallette.swift */,
 			);
 			path = Trade;
 			sourceTree = "<group>";
@@ -145,6 +154,22 @@
 				C2FB42EB20596A7B00E4F968 /* AppStoryboards.swift */,
 			);
 			path = GeneratedCode;
+			sourceTree = "<group>";
+		};
+		C2FB42F120596BA700E4F968 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2FB42F220596BB600E4F968 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C2FB42F220596BB600E4F968 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C2FB42F320596BC000E4F968 /* UIColor+.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,10 +413,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FB42F020596B7D00E4F968 /* Pallette.swift in Sources */,
 				C2FB42EC20596A7B00E4F968 /* AppStoryboards.swift in Sources */,
 				C2FB42C1205961EF00E4F968 /* ViewController.swift in Sources */,
 				C2FB42BF205961EF00E4F968 /* AppDelegate.swift in Sources */,
+				C2FB42EE20596B6200E4F968 /* App.swift in Sources */,
 				C2FB42E72059696E00E4F968 /* Price.swift in Sources */,
+				C2FB42F420596BC000E4F968 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
