@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Trade
-//
-//  Created by marlon.tojal on 14/03/2018.
-//  Copyright © 2018 marlon.tojal. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -20,6 +12,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
