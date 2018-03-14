@@ -6,7 +6,7 @@ class Price: Decodable {
 
     init(amount: Double,
          currency: String,
-         decimals: Int = 1) {
+         decimals: Int = 2) {
 
         self.amount = amount
         self.currency = currency

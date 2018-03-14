@@ -19,6 +19,7 @@
 		C2FB42EE20596B6200E4F968 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42ED20596B6200E4F968 /* App.swift */; };
 		C2FB42F020596B7D00E4F968 /* Pallette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42EF20596B7D00E4F968 /* Pallette.swift */; };
 		C2FB42F420596BC000E4F968 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42F320596BC000E4F968 /* UIColor+.swift */; };
+		C2FB42FB2059749500E4F968 /* PriceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42FA2059749500E4F968 /* PriceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C2FB42ED20596B6200E4F968 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		C2FB42EF20596B7D00E4F968 /* Pallette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallette.swift; sourceTree = "<group>"; };
 		C2FB42F320596BC000E4F968 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		C2FB42FA2059749500E4F968 /* PriceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTest.swift; sourceTree = "<group>"; };
 		D55C7941B113F114FB5C2112 /* Pods_TradeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 		C2FB42D2205961EF00E4F968 /* TradeTests */ = {
 			isa = PBXGroup;
 			children = (
+				C2FB42F92059746F00E4F968 /* Model */,
 				C2FB42D5205961EF00E4F968 /* Info.plist */,
 			);
 			path = TradeTests;
@@ -202,6 +205,14 @@
 				C2FB42ED20596B6200E4F968 /* App.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		C2FB42F92059746F00E4F968 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2FB42FA2059749500E4F968 /* PriceTest.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FB42FB2059749500E4F968 /* PriceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
