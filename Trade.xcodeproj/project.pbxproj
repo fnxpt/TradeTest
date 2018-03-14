@@ -123,7 +123,7 @@
 				C2FB42BE205961EF00E4F968 /* AppDelegate.swift */,
 				C2FB42C0205961EF00E4F968 /* ViewController.swift */,
 				C2FB42C2205961EF00E4F968 /* Main.storyboard */,
-				C2FB42C5205961EF00E4F968 /* Assets.xcassets */,
+				C2FB42F520596DF600E4F968 /* Resources */,
 				C2FB42C7205961EF00E4F968 /* LaunchScreen.storyboard */,
 				C2FB42CA205961EF00E4F968 /* Info.plist */,
 				C2FB42ED20596B6200E4F968 /* App.swift */,
@@ -170,6 +170,14 @@
 				C2FB42F320596BC000E4F968 /* UIColor+.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		C2FB42F520596DF600E4F968 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C2FB42C5205961EF00E4F968 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
