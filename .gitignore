@@ -1,6 +1,11 @@
 
 # Created by https://www.gitignore.io/api/xcode,swift,swiftpm,carthage,cocoapods,objective-c,swiftpackagemanager
 
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
 ### Carthage ###
 # Carthage
 #
