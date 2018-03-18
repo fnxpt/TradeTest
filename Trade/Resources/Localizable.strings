@@ -1,0 +1,4 @@
+"products" = "Products";
+"no_results" = "You don't have any product yet, please + one";
+"unexpected" = "¯\\_(ツ)_/¯ \n\n An unexpected error has occurred please try again later";
+"unableToParse" = "¯\\_(ツ)_/¯ \n\n Unable to parse server's response";

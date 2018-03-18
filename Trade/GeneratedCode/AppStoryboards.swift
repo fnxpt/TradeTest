@@ -61,13 +61,18 @@ enum StoryboardScene {
   enum Main: StoryboardType {
     static let storyboardName = "Main"
 
-    static let initialScene = InitialSceneType<Trade.ViewController>(storyboard: Main.self)
+    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Main.self)
 
-    static let viewController = SceneType<Trade.ViewController>(storyboard: Main.self, identifier: "ViewController")
+    static let detailViewController = SceneType<Trade.DetailViewController>(storyboard: Main.self, identifier: "DetailViewController")
+
+    static let listViewController = SceneType<Trade.ListViewController>(storyboard: Main.self, identifier: "ListViewController")
   }
 }
 
 enum StoryboardSegue {
+  enum Main: String, SegueType {
+    case segueDetail = "segue-detail"
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
 

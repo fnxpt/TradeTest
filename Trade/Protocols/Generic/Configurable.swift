@@ -1,0 +1,4 @@
+protocol Configurable {
+    
+    func config()
+}
