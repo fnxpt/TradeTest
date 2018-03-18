@@ -31,17 +31,22 @@ class App {
             let tmp = try? [Product].decode(data: subscriptions)
             subscribed = tmp ?? []
             
-            subscribed.forEach({ product in
-                
-                self.client.load(product: product.securityId, completion: { item, _ in
-                    
-                    if let item = item {
-                        
-                        product.closingPrice = item.closingPrice
-                    }
-                })
-            })
+            updateSubscriptions()
         }
+    }
+    
+    private func updateSubscriptions() {
+        
+        subscribed.forEach({ [unowned self] product in
+            
+            self.client.load(product: product.securityId, completion: { item, _ in
+                
+                if let item = item {
+                    
+                    product.closingPrice = item.closingPrice
+                }
+            })
+        })
     }
 }
 
