@@ -1,12 +1,15 @@
 PODS:
   - Starscream (3.0.4)
+  - SwiftChart (1.0.1)
 
 DEPENDENCIES:
   - Starscream (~> 3.0)
+  - SwiftChart
 
 SPEC CHECKSUMS:
   Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
+  SwiftChart: ba767a678d568a5ee22d419e146a0582865e1aff
 
-PODFILE CHECKSUM: 14a52b053db5326155103d4f1eb3593f2d73b23d
+PODFILE CHECKSUM: 757f8f4d4519d1753c12bb53cb31bb14a1dfd099
 
 COCOAPODS: 1.4.0
