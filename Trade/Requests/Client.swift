@@ -1,28 +1,59 @@
 import UIKit
 import Starscream
+import Reachability
 
 class Client: TradeClientProtocol {
     
-    private var socket: WebSocket
+    var isConnected: Bool = false
+    
+    private var socket: WebSocket?
     private var subscribed: [Product] = []
+    private var reachability = Reachability(hostname: API.socket)
     
     init() {
         
-        var request = URLRequest(url: URL(string: "http://localhost:8080/subscriptions/me")!)
-        request.timeoutInterval = 5
-        request.setValue(API.token, forHTTPHeaderField: "Authorization")
-        socket = WebSocket(request: request)
-        socket.callbackQueue = DispatchQueue(label: "pt.fnx.socket")
-        
-        socket.onConnect = { //[unowned self]
+        if let url = URL(string: API.endpoitProtocol + API.socket + API.mySubscriptions) {
             
+            var request = URLRequest(url: url)
+            
+            request.timeoutInterval = 5
+            request.setValue(API.token, forHTTPHeaderField: "Authorization")
+            socket = WebSocket(request: request)
+            socket?.callbackQueue = DispatchQueue(label: "pt.fnx.socket")
+            
+            configSocket()
+            configReachability()
+        }
+    }
+    
+    private func configReachability() {
+        
+        reachability?.whenReachable = { [unowned self] reachability in
+            
+            self.socket?.callbackQueue.async {
+                
+                if reachability.connection != .none && !self.isConnected {
+                    self.socket?.connect()
+                }
+            }
+        }
+    }
+    
+    private func configSocket() {
+        
+        socket?.onConnect = { [unowned self] in
+            
+            self.isConnected = true
+            self.reachability?.stopNotifier()
         }
         
-        socket.onDisconnect = { error in
-            print(error?.localizedDescription ?? "")
+        socket?.onDisconnect = { [unowned self] _ in
+            
+            self.isConnected = false
+            try? self.reachability?.startNotifier()
         }
         
-        socket.onText = { [unowned self] text in
+        socket?.onText = { [unowned self] text in
             
             if let data = text.data(using: .utf8),
                 let response = SocketResponse(data: data),
@@ -35,7 +66,7 @@ class Client: TradeClientProtocol {
             }
         }
         
-        self.socket.connect()
+        self.socket?.connect()
     }
     
     func load(product identifier: String,
@@ -61,7 +92,7 @@ class Client: TradeClientProtocol {
         let encoder = JSONEncoder()
         let data = try? encoder.encode(subscriptions)
         if let data = data {
-            self.socket.write(data: data)
+            self.socket?.write(data: data)
             subscribed = products
         }
     }
@@ -72,7 +103,7 @@ class Client: TradeClientProtocol {
         let encoder = JSONEncoder()
         let data = try? encoder.encode(subscriptions)
         if let data = data {
-            self.socket.write(data: data)
+            self.socket?.write(data: data)
             subscribed = []
         }
     }

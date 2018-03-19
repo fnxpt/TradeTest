@@ -7,7 +7,7 @@ class ProductRequest: RequestProtocol, Requestable {
     static func get(identifier: String,
                     completionHandler: @escaping (Response<ResponseType>) -> Void) {
         
-        let path = API.endpoint + String(format: API.product, identifier)
+        let path = API.endpoitProtocol + API.endpoint + String(format: API.product, identifier)
         
         if let url = URL(string: path) {
             
