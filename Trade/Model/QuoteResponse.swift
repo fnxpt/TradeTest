@@ -6,7 +6,14 @@ class QuoteResponse: SocketResponseObject {
     let amount: Double
     let date: Date
     
-    required init?(json: [String: Any]) {
+    init(identifier: String, amount: Double, date: Date) {
+        
+        self.identifier = identifier
+        self.amount = amount
+        self.date = date
+    }
+    
+    required convenience init?(json: [String: Any]) {
         
         guard let identifier = json["securityId"] as? String,
             let priceString = json["currentPrice"] as? String,
@@ -16,8 +23,6 @@ class QuoteResponse: SocketResponseObject {
                 return nil
         }
         
-        self.identifier = identifier
-        self.amount = amount
-        self.date = Date(timeIntervalSince1970: timestamp)
+        self.init(identifier: identifier, amount: amount, date: Date(timeIntervalSince1970: timestamp))
     }
 }

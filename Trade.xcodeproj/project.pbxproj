@@ -191,6 +191,33 @@
 			path = Generic;
 			sourceTree = "<group>";
 		};
+		C2DB43AC205FC1B40049400B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C249571D205C1A3D004268F9 /* SocketResponseType.swift */,
+				C2DB439D205E97720049400B /* Response.swift */,
+				C2DB439F205E97B50049400B /* ServiceError.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		C2DB43AD205FC1BE0049400B /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				C2FB42C0205961EF00E4F968 /* Client.swift */,
+				C2DB4399205E96020049400B /* ProductRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		C2DB43AE205FC1CC0049400B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C2495706205BF2E8004268F9 /* ListDataSource.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C2FB42B2205961EF00E4F968 = {
 			isa = PBXGroup;
 			children = (
@@ -223,10 +250,9 @@
 				C2FB42F620596F7100E4F968 /* Layout */,
 				C2FB42F520596DF600E4F968 /* Resources */,
 				C2FB42F820596F8700E4F968 /* Support */,
-				C2495706205BF2E8004268F9 /* ListDataSource.swift */,
-				C2DB4399205E96020049400B /* ProductRequest.swift */,
-				C2DB439D205E97720049400B /* Response.swift */,
-				C2DB439F205E97B50049400B /* ServiceError.swift */,
+				C2DB43AE205FC1CC0049400B /* ViewModel */,
+				C2DB43AD205FC1BE0049400B /* Requests */,
+				C2DB43AC205FC1B40049400B /* Enums */,
 			);
 			path = Trade;
 			sourceTree = "<group>";
@@ -248,7 +274,6 @@
 				C2495717205C10B5004268F9 /* Subscriptions.swift */,
 				C2495719205C14FC004268F9 /* SocketResponse.swift */,
 				C249571B205C154A004268F9 /* QuoteResponse.swift */,
-				C249571D205C1A3D004268F9 /* SocketResponseType.swift */,
 				C2495721205C4EA9004268F9 /* ConnectionFailedResponse.swift */,
 			);
 			path = Model;
@@ -305,7 +330,6 @@
 		C2FB42F720596F7700E4F968 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C2FB42C0205961EF00E4F968 /* Client.swift */,
 				C2495701205BEC25004268F9 /* ListViewController.swift */,
 				C2495715205BFD33004268F9 /* DetailViewController.swift */,
 			);

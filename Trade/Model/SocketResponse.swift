@@ -5,7 +5,13 @@ class SocketResponse {
     let body: SocketResponseObject?
     let type: SocketResponseType
     
-    init?(data: Data) {
+    init(type: SocketResponseType, body: SocketResponseObject?) {
+        
+        self.type = type
+        self.body = body
+    }
+    
+    convenience init?(data: Data) {
         guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
             let typeString = json?["t"] as? String,
             let type = SocketResponseType(rawValue: typeString),
@@ -14,7 +20,8 @@ class SocketResponse {
                 return nil
         }
         
-        self.type = type
-        self.body = type.object().init(json: body)
+        let response = type.object().init(json: body)
+        
+        self.init(type: type, body: response)
     }
 }

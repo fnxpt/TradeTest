@@ -4,7 +4,14 @@ class ConnectionFailedResponse: Codable, FailedReasonProtocol, SocketResponseObj
     let developerMessage: String
     let message: String
     
-    required init?(json: [String: Any]) {
+    init(code: String, message: String, developerMessage: String) {
+        
+        self.errorCode = code
+        self.developerMessage = developerMessage
+        self.message = message
+    }
+    
+    required convenience init?(json: [String: Any]) {
         
         guard let errorCode = json["errorCode"] as? String,
             let developerMessage = json["developerMessage"] as? String,
@@ -13,8 +20,6 @@ class ConnectionFailedResponse: Codable, FailedReasonProtocol, SocketResponseObj
                 return nil
         }
         
-        self.errorCode = errorCode
-        self.developerMessage = developerMessage
-        self.message = message
+        self.init(code: errorCode, message: message, developerMessage: developerMessage)
     }
 }
