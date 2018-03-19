@@ -27,8 +27,14 @@
 		C249571C205C154A004268F9 /* QuoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249571B205C154A004268F9 /* QuoteResponse.swift */; };
 		C249571E205C1A3D004268F9 /* SocketResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249571D205C1A3D004268F9 /* SocketResponseType.swift */; };
 		C2495720205C1A4D004268F9 /* SocketResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249571F205C1A4D004268F9 /* SocketResponseObject.swift */; };
-		C2495722205C4EA9004268F9 /* ConnectionFailedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2495721205C4EA9004268F9 /* ConnectionFailedResponse.swift */; };
+		C2495722205C4EA9004268F9 /* FailedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2495721205C4EA9004268F9 /* FailedResponse.swift */; };
 		C2495729205D23ED004268F9 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2495728205D23ED004268F9 /* Configurable.swift */; };
+		C286A5BA2060170F003F1AFD /* ListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286A5B92060170F003F1AFD /* ListViewControllerTest.swift */; };
+		C286A5BC2060171C003F1AFD /* DetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286A5BB2060171C003F1AFD /* DetailViewControllerTest.swift */; };
+		C286A5BE2060246B003F1AFD /* ConnectedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286A5BD2060246B003F1AFD /* ConnectedResponse.swift */; };
+		C286A5CB20605C03003F1AFD /* ConnectedResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286A5CA20605C03003F1AFD /* ConnectedResponseTest.swift */; };
+		C286A5CD20605C21003F1AFD /* FailedResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286A5CC20605C21003F1AFD /* FailedResponseTest.swift */; };
+		C286A5CF20605C3E003F1AFD /* QuoteResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286A5CE20605C3E003F1AFD /* QuoteResponseTest.swift */; };
 		C2DB4396205E8F400049400B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2DB4395205E8F400049400B /* Localizable.strings */; };
 		C2DB4398205E93FD0049400B /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB4397205E93FD0049400B /* UIViewController+Alert.swift */; };
 		C2DB439A205E96020049400B /* ProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB4399205E96020049400B /* ProductRequest.swift */; };
@@ -39,6 +45,9 @@
 		C2DB43A4205E99BB0049400B /* Decodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB43A3205E99BB0049400B /* Decodable+.swift */; };
 		C2DB43A6205F0ACD0049400B /* TradeClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB43A5205F0ACD0049400B /* TradeClientProtocol.swift */; };
 		C2DB43AA205F0FA90049400B /* FailedReasonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB43A9205F0FA90049400B /* FailedReasonProtocol.swift */; };
+		C2DB43CD205FD89C0049400B /* SubscriptionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB43CC205FD89C0049400B /* SubscriptionsTest.swift */; };
+		C2DB43CF205FDAFF0049400B /* SocketResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB43CE205FDAFF0049400B /* SocketResponseTest.swift */; };
+		C2DF190B2060781B00CA518D /* ProductRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF190A2060781B00CA518D /* ProductRequestTest.swift */; };
 		C2FB42BF205961EF00E4F968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42BE205961EF00E4F968 /* AppDelegate.swift */; };
 		C2FB42C1205961EF00E4F968 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42C0205961EF00E4F968 /* Client.swift */; };
 		C2FB42C4205961EF00E4F968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FB42C2205961EF00E4F968 /* Main.storyboard */; };
@@ -87,8 +96,14 @@
 		C249571B205C154A004268F9 /* QuoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteResponse.swift; sourceTree = "<group>"; };
 		C249571D205C1A3D004268F9 /* SocketResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketResponseType.swift; sourceTree = "<group>"; };
 		C249571F205C1A4D004268F9 /* SocketResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketResponseObject.swift; sourceTree = "<group>"; };
-		C2495721205C4EA9004268F9 /* ConnectionFailedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionFailedResponse.swift; sourceTree = "<group>"; };
+		C2495721205C4EA9004268F9 /* FailedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedResponse.swift; sourceTree = "<group>"; };
 		C2495728205D23ED004268F9 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		C286A5B92060170F003F1AFD /* ListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTest.swift; sourceTree = "<group>"; };
+		C286A5BB2060171C003F1AFD /* DetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTest.swift; sourceTree = "<group>"; };
+		C286A5BD2060246B003F1AFD /* ConnectedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedResponse.swift; sourceTree = "<group>"; };
+		C286A5CA20605C03003F1AFD /* ConnectedResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedResponseTest.swift; sourceTree = "<group>"; };
+		C286A5CC20605C21003F1AFD /* FailedResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedResponseTest.swift; sourceTree = "<group>"; };
+		C286A5CE20605C3E003F1AFD /* QuoteResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteResponseTest.swift; sourceTree = "<group>"; };
 		C2DB4395205E8F400049400B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C2DB4397205E93FD0049400B /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		C2DB4399205E96020049400B /* ProductRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRequest.swift; sourceTree = "<group>"; };
@@ -99,6 +114,9 @@
 		C2DB43A3205E99BB0049400B /* Decodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+.swift"; sourceTree = "<group>"; };
 		C2DB43A5205F0ACD0049400B /* TradeClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeClientProtocol.swift; sourceTree = "<group>"; };
 		C2DB43A9205F0FA90049400B /* FailedReasonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedReasonProtocol.swift; sourceTree = "<group>"; };
+		C2DB43CC205FD89C0049400B /* SubscriptionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsTest.swift; sourceTree = "<group>"; };
+		C2DB43CE205FDAFF0049400B /* SocketResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketResponseTest.swift; sourceTree = "<group>"; };
+		C2DF190A2060781B00CA518D /* ProductRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRequestTest.swift; sourceTree = "<group>"; };
 		C2FB42BB205961EF00E4F968 /* Trade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FB42BE205961EF00E4F968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2FB42C0205961EF00E4F968 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -180,6 +198,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C286A5B8206016FE003F1AFD /* UIViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C286A5B92060170F003F1AFD /* ListViewControllerTest.swift */,
+				C286A5BB2060171C003F1AFD /* DetailViewControllerTest.swift */,
+			);
+			path = UIViewControllers;
+			sourceTree = "<group>";
+		};
+		C286A5D0206061BC003F1AFD /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
 		C2DB43AB205F11D90049400B /* Generic */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +250,14 @@
 				C2495706205BF2E8004268F9 /* ListDataSource.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C2DF19092060780C00CA518D /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				C2DF190A2060781B00CA518D /* ProductRequestTest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		C2FB42B2205961EF00E4F968 = {
@@ -260,8 +302,11 @@
 		C2FB42D2205961EF00E4F968 /* TradeTests */ = {
 			isa = PBXGroup;
 			children = (
-				C2FB42F92059746F00E4F968 /* Model */,
+				C2DF19092060780C00CA518D /* Requests */,
+				C286A5D0206061BC003F1AFD /* VIewModel */,
 				C2FB42D5205961EF00E4F968 /* Info.plist */,
+				C286A5B8206016FE003F1AFD /* UIViewControllers */,
+				C2FB42F92059746F00E4F968 /* Model */,
 			);
 			path = TradeTests;
 			sourceTree = "<group>";
@@ -274,7 +319,8 @@
 				C2495717205C10B5004268F9 /* Subscriptions.swift */,
 				C2495719205C14FC004268F9 /* SocketResponse.swift */,
 				C249571B205C154A004268F9 /* QuoteResponse.swift */,
-				C2495721205C4EA9004268F9 /* ConnectionFailedResponse.swift */,
+				C2495721205C4EA9004268F9 /* FailedResponse.swift */,
+				C286A5BD2060246B003F1AFD /* ConnectedResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +398,11 @@
 			children = (
 				C2FB42FA2059749500E4F968 /* PriceTest.swift */,
 				C24956FD205BE5E0004268F9 /* ProductTest.swift */,
+				C2DB43CC205FD89C0049400B /* SubscriptionsTest.swift */,
+				C2DB43CE205FDAFF0049400B /* SocketResponseTest.swift */,
+				C286A5CA20605C03003F1AFD /* ConnectedResponseTest.swift */,
+				C286A5CC20605C21003F1AFD /* FailedResponseTest.swift */,
+				C286A5CE20605C3E003F1AFD /* QuoteResponseTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -605,6 +656,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2495712205BF858004268F9 /* String+Localized.swift in Sources */,
+				C286A5BE2060246B003F1AFD /* ConnectedResponse.swift in Sources */,
 				C2FB42F020596B7D00E4F968 /* Pallette.swift in Sources */,
 				C2DB4398205E93FD0049400B /* UIViewController+Alert.swift in Sources */,
 				C2FB42EC20596A7B00E4F968 /* AppStoryboards.swift in Sources */,
@@ -619,7 +671,7 @@
 				C2495718205C10B5004268F9 /* Subscriptions.swift in Sources */,
 				C2495729205D23ED004268F9 /* Configurable.swift in Sources */,
 				C2495704205BEC45004268F9 /* GroupableDataSource.swift in Sources */,
-				C2495722205C4EA9004268F9 /* ConnectionFailedResponse.swift in Sources */,
+				C2495722205C4EA9004268F9 /* FailedResponse.swift in Sources */,
 				C249571E205C1A3D004268F9 /* SocketResponseType.swift in Sources */,
 				C2FB42C1205961EF00E4F968 /* Client.swift in Sources */,
 				C2DB43A4205E99BB0049400B /* Decodable+.swift in Sources */,
@@ -647,7 +699,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2FB42FB2059749500E4F968 /* PriceTest.swift in Sources */,
+				C286A5BA2060170F003F1AFD /* ListViewControllerTest.swift in Sources */,
+				C2DB43CD205FD89C0049400B /* SubscriptionsTest.swift in Sources */,
+				C286A5CD20605C21003F1AFD /* FailedResponseTest.swift in Sources */,
+				C286A5CF20605C3E003F1AFD /* QuoteResponseTest.swift in Sources */,
 				C24956FE205BE5E0004268F9 /* ProductTest.swift in Sources */,
+				C2DB43CF205FDAFF0049400B /* SocketResponseTest.swift in Sources */,
+				C286A5CB20605C03003F1AFD /* ConnectedResponseTest.swift in Sources */,
+				C286A5BC2060171C003F1AFD /* DetailViewControllerTest.swift in Sources */,
+				C2DF190B2060781B00CA518D /* ProductRequestTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@ class PriceTest: XCTestCase {
     
     let defaultLocale = Locale(identifier: "en_US")
     
-    func testSimple() {
+    func testSimpleWithDefaultLocaleAndEUR() {
         
         let item = Price(amount: 20, currency: "EUR", locale: defaultLocale)
         
@@ -14,7 +14,7 @@ class PriceTest: XCTestCase {
         
     }
     
-    func testSimple2() {
+    func testSimpleWithDefaultLocaleAndUSD() {
         
         let item = Price(amount: 19.999999999, currency: "USD", locale: defaultLocale)
         
@@ -23,7 +23,7 @@ class PriceTest: XCTestCase {
         
     }
     
-    func testSimple3() {
+    func testSimpleWithDefaultLocaleAndJPY() {
         
         let item = Price(amount: 19.969999999, currency: "JPY", locale: defaultLocale)
         
@@ -32,7 +32,7 @@ class PriceTest: XCTestCase {
         
     }
     
-    func testSimple4() {
+    func testSimpleWithoutDecimals() {
         
         let item = Price(amount: 5.123123, currency: "EUR", decimals: 0, locale: defaultLocale)
         
@@ -40,7 +40,7 @@ class PriceTest: XCTestCase {
         XCTAssertEqual(item.description, "€5")
     }
     
-    func testSimple5() {
+    func testSimpleWith3Decimals() {
         
         let item = Price(amount: 5.123123, currency: "EUR", decimals: 3, locale: defaultLocale)
         
@@ -48,14 +48,14 @@ class PriceTest: XCTestCase {
         XCTAssertEqual(item.description, "€5.123")
     }
     
-    func testSimple6() {
+    func testSimpleWithNetherlandsLocale() {
         
         let item = Price(amount: 20.356, currency: "EUR", locale: Locale(identifier: "nl_NL"))
 
         XCTAssertEqual(item.description, "€ 20,36")
     }
     
-    func testSimple7() {
+    func testSimpleWithJapanLocale() {
         
         let item = Price(amount: 20.356, currency: "JPY", locale: Locale(identifier: "jp_JP"))
 

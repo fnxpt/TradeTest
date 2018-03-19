@@ -5,7 +5,7 @@ class ProductTest: XCTestCase {
     
     let defaultLocale = Locale(identifier: "en_US")
     
-    func testProduct1() {
+    func testInitialization() {
         
         let price = Price(amount: 10, currency: "EUR", locale: defaultLocale)
         let item = Product(identifier: "26608", symbol: "FRANCE40", displayName: "French Exchange", closingPrice: price)
@@ -17,7 +17,7 @@ class ProductTest: XCTestCase {
         XCTAssertEqual(item.currentPrice.description, "€10.00")
     }
     
-    func testProduct2() {
+    func testIntitializationWithCurrentPrice() {
         
         let price = Price(amount: 10, currency: "EUR", locale: defaultLocale)
         let updatedPrice = Price(amount: 20, currency: "EUR", locale: defaultLocale)
@@ -28,7 +28,7 @@ class ProductTest: XCTestCase {
         XCTAssertEqual(item.currentPrice.description, "€20.00")
     }
     
-    func testProduct3() {
+    func testPriceUpdate() {
         
         let price = Price(amount: 10, currency: "EUR", locale: defaultLocale)
         let item = Product(identifier: "26608", symbol: "FRANCE40", displayName: "French Exchange", closingPrice: price)
@@ -40,5 +40,25 @@ class ProductTest: XCTestCase {
         
         XCTAssertEqual(item.closingPrice.description, "€10.00")
         XCTAssertEqual(item.currentPrice.description, "€20.00")
+    }
+    
+    func testPricePercentageAndWinning() {
+        
+        let price = Price(amount: 10, currency: "EUR", locale: defaultLocale)
+        let item = Product(identifier: "26608", symbol: "FRANCE40", displayName: "French Exchange", closingPrice: price)
+        
+        XCTAssertEqual(item.isWinning, true)
+        XCTAssertEqual(item.percentage, 0)
+        
+        item.update(model: 20)
+        
+        XCTAssertEqual(item.isWinning, true)
+        XCTAssertEqual(item.percentage, 100)
+        
+        item.update(model: 5)
+        
+        XCTAssertEqual(item.isWinning, false)
+        XCTAssertEqual(item.percentage, -50)
+        
     }
 }
