@@ -38,6 +38,7 @@ class ProductCell: UITableViewCell {
     
     @objc
     private func update(notification: Notification) {
+        
         if let item = notification.object as? Product {
             product = item
         }

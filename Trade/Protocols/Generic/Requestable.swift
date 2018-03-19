@@ -35,7 +35,7 @@ extension Requestable {
                     if data.isEmpty {
                         completionHandler(.error(error: ServiceError.unexpected))
                     } else if error is DecodingError,
-                        let reason = try? ConnectionFailedResponse.decode(data: data) {
+                        let reason = try? FailedResponse.decode(data: data) {
                         completionHandler(.error(error: ServiceError.failed(reason: reason)))
                     } else {
                         completionHandler(.error(error: error))
