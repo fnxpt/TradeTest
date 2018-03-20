@@ -6,3 +6,5 @@ enabled_rules:
   - storyboard_viewcontroller_id
 disabled_rules:
   - custom_class_name
+excluded:
+  - Pods

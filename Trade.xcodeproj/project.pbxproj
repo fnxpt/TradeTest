@@ -48,6 +48,7 @@
 		C2DB43CD205FD89C0049400B /* SubscriptionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB43CC205FD89C0049400B /* SubscriptionsTest.swift */; };
 		C2DB43CF205FDAFF0049400B /* SocketResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB43CE205FDAFF0049400B /* SocketResponseTest.swift */; };
 		C2DF190B2060781B00CA518D /* ProductRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF190A2060781B00CA518D /* ProductRequestTest.swift */; };
+		C2DF19152061B8C100CA518D /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF19142061B8C100CA518D /* Mock.generated.swift */; };
 		C2FB42BF205961EF00E4F968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42BE205961EF00E4F968 /* AppDelegate.swift */; };
 		C2FB42C1205961EF00E4F968 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB42C0205961EF00E4F968 /* Client.swift */; };
 		C2FB42C4205961EF00E4F968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FB42C2205961EF00E4F968 /* Main.storyboard */; };
@@ -117,6 +118,7 @@
 		C2DB43CC205FD89C0049400B /* SubscriptionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsTest.swift; sourceTree = "<group>"; };
 		C2DB43CE205FDAFF0049400B /* SocketResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketResponseTest.swift; sourceTree = "<group>"; };
 		C2DF190A2060781B00CA518D /* ProductRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRequestTest.swift; sourceTree = "<group>"; };
+		C2DF19142061B8C100CA518D /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		C2FB42BB205961EF00E4F968 /* Trade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FB42BE205961EF00E4F968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2FB42C0205961EF00E4F968 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -260,6 +262,14 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		C2DF19132061B11400CA518D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C2DF19142061B8C100CA518D /* Mock.generated.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		C2FB42B2205961EF00E4F968 = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +312,7 @@
 		C2FB42D2205961EF00E4F968 /* TradeTests */ = {
 			isa = PBXGroup;
 			children = (
+				C2DF19132061B11400CA518D /* Mocks */,
 				C2DF19092060780C00CA518D /* Requests */,
 				C286A5D0206061BC003F1AFD /* VIewModel */,
 				C2FB42D5205961EF00E4F968 /* Info.plist */,
@@ -578,9 +589,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TradeTests/Pods-TradeTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyMocky/SwiftyMocky.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyMocky.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -631,7 +645,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen >/dev/null; then\n    echo \"Generate Storyboards\"\n    swiftgen storyboards  $SRCROOT/Trade --output $SRCROOT/Trade/GeneratedCode/AppStoryboards.swift -t swift4\nelse\n    echo \"Warning: SwiftGen not installed\"\nfi\n\n\n    \n";
+			shellScript = "if which swiftgen >/dev/null; then\n    echo \"Generate Storyboards\"\n    swiftgen storyboards  $SRCROOT/Trade --output $SRCROOT/Trade/GeneratedCode/AppStoryboards.swift -t swift4\nelse\n    echo \"Warning: SwiftGen not installed\"\nfi\n\necho \"Generate Mocks\"\n$PODS_ROOT/Sourcery/bin/sourcery --config .mocky.yml\n";
 		};
 		EEBE3F168544A36668D51A13 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -701,6 +715,7 @@
 				C2FB42FB2059749500E4F968 /* PriceTest.swift in Sources */,
 				C286A5BA2060170F003F1AFD /* ListViewControllerTest.swift in Sources */,
 				C2DB43CD205FD89C0049400B /* SubscriptionsTest.swift in Sources */,
+				C2DF19152061B8C100CA518D /* Mock.generated.swift in Sources */,
 				C286A5CD20605C21003F1AFD /* FailedResponseTest.swift in Sources */,
 				C286A5CF20605C3E003F1AFD /* QuoteResponseTest.swift in Sources */,
 				C24956FE205BE5E0004268F9 /* ProductTest.swift in Sources */,

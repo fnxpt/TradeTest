@@ -1,0 +1,19 @@
+sources:
+  include:
+    - ./Trade
+    - ./TradeTests
+templates:
+  - ./Pods/SwiftyMocky/Sources/Templates
+output:
+  ./TradeTests/Mocks
+args:
+  testable:
+    - Trade
+  excludedSwiftLintRules:
+    - vertical_whitespace
+    - closure_spacing
+    - trailing_newline
+    - switch_case_alignment
+    - switch_case_on_newline
+    - identifier_name
+    - line_length

@@ -7,9 +7,8 @@ target 'Trade' do
   pod 'Starscream', '~> 3.0'
   pod 'SwiftChart'
   
-  
   target 'TradeTests' do
     inherit! :search_paths
-
+        pod 'SwiftyMocky'
   end
 end
