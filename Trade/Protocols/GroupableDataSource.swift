@@ -1,5 +1,6 @@
 import UIKit
 
+//sourcery: AutoMockable
 protocol GroupableDataSource {
     
     func numberOfGroups() -> Int
